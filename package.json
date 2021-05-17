@@ -1,0 +1,8 @@
+{
+  "name": "edges",
+  "version": "1.0.0",
+  "description": "A solution to query github super nested API using GraphQL and prunning with map-reduce functions",
+  "main": "app.js",
+  "author": "Jude Kuti",
+  "license": "MIT"
+}
