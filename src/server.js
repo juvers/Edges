@@ -11,12 +11,12 @@ import { TaskQuery, TaskVariables, TaskSchema } from './graphql/task';
 import config from './config';
 const app = express();
 
-function setPort(port = 5501) {
+function setPort(port = 5000) {
     app.set('port', parseInt(port, 10));
 }
 
 function listen() {
-    const port = app.get('port') || 5501;
+    const port = app.get('port') || 5000;
     app.listen(port, () => {
         console.log(`The server is running and listening at http://localhost:${port}`);
         // Log task after app has begun listening

@@ -1,7 +1,9 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
+require('dotenv').config();
+
 const BASE_URL = 'https://api.github.com/';
-const TOKEN = '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';
+const TOKEN = process.env.TOKEN;;
 
 const generateClient = async (query, variables, endpoint = 'graphql', method = 'POST') => (
     await fetch(BASE_URL + endpoint, {
