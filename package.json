@@ -4,5 +4,12 @@
   "description": "A solution to query github super nested API using GraphQL and prunning with map-reduce functions",
   "main": "app.js",
   "author": "Jude Kuti",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/register": "^7.13.16"
+  }
 }
