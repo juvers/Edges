@@ -19,7 +19,7 @@ const httpClient = async (query, variables, endpoint = 'graphql', method = 'POST
     }).then(res => res.text()).then(data => {
         // Remove return carriage and new line feed
         const content = data.replace(/\r?\n|\r/g, '');
-        // Parse content to prevent unexpected behavior
+        // Parse content to prevent unexpected behavior such os the first letter O being returned for status OK.
         const parsed = JSON.parse(content);
         const create = (o) => {
             const base = o.data?.search;
@@ -62,7 +62,7 @@ const httpClient = async (query, variables, endpoint = 'graphql', method = 'POST
             final_object['results'] = [...computed_results];
 
             console.log(JSON.stringify(final_object, null, 4));
-            console.log(process.env.TOKEN);
+           
         }
         create(parsed);
     })

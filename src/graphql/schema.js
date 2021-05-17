@@ -78,12 +78,6 @@ const SearchType = new GraphQLObjectType({
   })
 })
 
-const ComboType = new GraphQLObjectType({
-  name: 'ComboQuery',
-  fields: () => ({
-
- })
-})
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {

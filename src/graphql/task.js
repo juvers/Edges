@@ -1,5 +1,5 @@
 
-export const [repo, commit] = [5, 5];
+export const [repo, commit] = [10, 3];
 export const TaskVariables = { "queryString": "is:public language:Ruby stars:>8000 created:2012-05-01..2021-05-01", "repo": repo, "commit": commit };
 export const TaskQuery =
   `
