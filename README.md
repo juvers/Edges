@@ -70,17 +70,16 @@ N/A
 └── server.js
 </pre>
 
-###### V. Instructions on how to run the program
-1. Download zipped folder (and unzip).
-2. Ensure node is already installed. You can visit 
-3. [https://nodejs.org/en/download/)](https://nodejs.org/en/download/)
-4. Install yarn through the npm package manager that accompanies node `npm install --global yarn`
-5. Once inside folder run `yarn install`
-6. Since the endpoint for this project is  `https://api.github.com/graphql` authentication is required to communicate with the GraphQL server. Therefore create PAT(personal access token) as follows: 
+###### V. Instructions on how to run the program: ==Note #6==
+1. Run `git clone https://github.com/juvers/edges.git` or download zipped folder (and unzip).
+2. Ensure node is already installed. You can visit [https://nodejs.org/en/download/)](https://nodejs.org/en/download/)
+3. Install yarn through the npm package manager that accompanies node `npm install --global yarn`
+4. Once inside folder run `yarn install`
+5. Since the endpoint for this project is  `https://api.github.com/graphql` authentication is required to communicate with the GraphQL server. Therefore create PAT(personal access token) as follows: 
   a. `Settings > Developer Settings > Personal access tokens > Generate new token`
   b. Match the follow scopes behavior when creating PAT 
    <pre>
-    ` user 
+      user 
       public_repo
       repo
       repo_deployment
@@ -89,13 +88,12 @@ N/A
       read:org
       read:public_key
       read:gpg_key
-   `
    </pre>
-  c. Create a .env file as shown in the [parent directory structure above](#parent-directory) and paste the token in the .env file as follows: `TOKEN='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'`
+6. Create a .env file as shown in the [parent directory structure above](#parent-directory) and paste the token in the .env file as follows: `TOKEN='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'`
   ==Remember to replace the token with your own token as this is a sample.== 
 
-  d. Run `yarn start`
-  e. Should you get error such as this `{"message":"Bad credentials","documentation_url":"https://docs.github.com/graphql"}`
+7. Run `yarn start`
+8. Should you get error such as this `{"message":"Bad credentials","documentation_url":"https://docs.github.com/graphql"}`
   check the PAT used to ensure is properly generated. A backup PAT can be made available by the developer if all else fail.
   f. If app is running correctly query variables can be explored at `src/graphql/task.js`
 
